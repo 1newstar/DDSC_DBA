@@ -1,0 +1,13 @@
+for /F %i in ('WMIC MEMORYCHIP GET capacity ^|findstr [0-9]') do set total=%i
+
+
+for /F %i in ('WMIC MEMORYCHIP GET capacity ^|findstr [0-9]') do set /a total=(%i/1024/1024)
+
+ 
+ 
+
+
+
+8589934592
+
+diskio的部分要改用KB 目前為byte
